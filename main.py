@@ -7,11 +7,11 @@ print("This application will store your location information in a local file cal
 
 # Saves location so it doesn't have to be manually typed each time
 infoFile = 'Info.txt'
-if os.stat(infoFile).st_size == 0:
+if os.path.exists(infoFile) == False:
     with open(infoFile, 'w', encoding='utf-8') as writeFile:
         location = input('Where would you like to search? (City, 2 Letter State): ').lower()
         writeFile.write(location)
-elif os.stat(infoFile).st_size > 0:
+elif os.path.exists(infoFile):
     with open(infoFile, 'rt') as readFile:
         location = readFile.read()
 
