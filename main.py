@@ -3,7 +3,7 @@ import requests
 from bs4 import BeautifulSoup
 
 # Disclaimer
-print("This application will store your location information in a local file called Info.txt, if you'd like to change the location, delete the file and run the script again.")
+print("This application will store your location information in a local file called Info.txt, if you'd like to change the location, delete the contents of the file and run the script again.")
 
 # Saves location so it doesn't have to be manually typed each time
 infoFile = 'Info.txt'
